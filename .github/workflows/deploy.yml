@@ -32,14 +32,14 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Build demo app
+    - name: Build ngXpress app
       run: npm run build
       
     - name: Add .nojekyll file
-      run: touch dist/demo/browser/.nojekyll
+      run: touch dist/ngxpress.dev/browser/.nojekyll
       
     - name: Add 404.html for SPA routing
-      run: cp dist/demo/browser/index.html dist/demo/browser/404.html
+      run: cp dist/ngxpress.dev/browser/index.html dist/ngxpress.dev/browser/404.html
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
