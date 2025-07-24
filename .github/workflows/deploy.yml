@@ -41,6 +41,9 @@ jobs:
     - name: Add 404.html for SPA routing
       run: cp dist/ngxpress.dev/browser/index.html dist/ngxpress.dev/browser/404.html
 
+    - name: Add CNAME for custom domain
+      run: echo 'ngxpress.dev' > dist/ngxpress.dev/browser/CNAME
+      
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
